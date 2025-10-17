@@ -1,0 +1,2187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teaching Portfolio - MTHEMBI MHLAVASI PERTUNIA MPINKELE</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Global Styles */
+        :root {
+            --primary-color: #4a235a;
+            --secondary-color: #8e44ad;
+            --accent-color: #e74c3c;
+            --light-color: #f5eef8;
+            --dark-color: #2c1436;
+            --text-color: #333;
+            --light-text: #f8f9fa;
+            --sidebar-width: 280px;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: #f9f9f9;
+            display: flex;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+        
+        h1, h2, h3, h4, h5 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        
+        h2 {
+            font-size: 2rem;
+            margin-top: 30px;
+            color: var(--secondary-color);
+        }
+        
+        h3 {
+            font-size: 1.5rem;
+            margin-top: 25px;
+        }
+        
+        h4 {
+            font-size: 1.2rem;
+            margin-top: 20px;
+        }
+        
+        h5 {
+            font-size: 1.1rem;
+            margin-top: 15px;
+            color: var(--secondary-color);
+        }
+        
+        p {
+            margin-bottom: 15px;
+        }
+        
+        ul, ol {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+        }
+        
+        a {
+            color: var(--secondary-color);
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Sidebar Styles */
+        .sidebar {
+            width: var(--sidebar-width);
+            background-color: var(--primary-color);
+            color: var(--light-text);
+            height: 100vh;
+            position: fixed;
+            overflow-y: auto;
+            padding: 20px;
+            box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+            z-index: 100;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            margin-bottom: 30px;
+            text-align: center;
+            padding-bottom: 15px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .sidebar-nav ul {
+            list-style: none;
+            margin: 0;
+        }
+        
+        .sidebar-nav ul li {
+            margin-bottom: 10px;
+        }
+        
+        .sidebar-nav ul li a {
+            color: var(--light-text);
+            display: block;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        
+        .sidebar-nav ul li a:hover {
+            background-color: rgba(255,255,255,0.1);
+            text-decoration: none;
+        }
+        
+        .sidebar-nav ul li.active a {
+            background-color: var(--secondary-color);
+        }
+        
+        .sidebar-nav ul ul {
+            margin-left: 15px;
+            margin-top: 5px;
+        }
+        
+        .sidebar-nav ul ul li a {
+            padding: 8px 15px;
+            font-size: 0.9rem;
+        }
+        
+        /* Main Content Styles */
+        .main-content {
+            flex: 1;
+            margin-left: var(--sidebar-width);
+            padding: 20px;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(74, 35, 90, 0.8), rgba(74, 35, 90, 0.8)), url('https://images.pexels.com/photos/5212345/pexels-photo-5212345.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 100px 0;
+            margin-bottom: 40px;
+            border-radius: 10px;
+        }
+        
+        .hero h1 {
+            color: white;
+            border-bottom: none;
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 30px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
+        
+        .btn:hover {
+            background-color: #7d3c98;
+            text-decoration: none;
+        }
+        
+        /* Collapsible Section Styles */
+        .collapsible-section {
+            margin-bottom: 20px;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        
+        .section-header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 15px 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background-color 0.3s;
+        }
+        
+        .section-header:hover {
+            background-color: #3b1b47;
+        }
+        
+        .section-header h2 {
+            margin: 0;
+            color: white;
+            font-size: 1.5rem;
+        }
+        
+        .section-header i {
+            transition: transform 0.3s;
+        }
+        
+        .section-header.active i {
+            transform: rotate(180deg);
+        }
+        
+        .section-content {
+            background-color: white;
+            padding: 0;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+        }
+        
+        .section-content.active {
+            padding: 20px;
+            max-height: 5000px;
+        }
+        
+        /* Professional Development Goals Styles */
+        .goal-section {
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .goal-section:last-child {
+            border-bottom: none;
+        }
+        
+        .goal-highlight {
+            background-color: #f5eef8;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+            border-left: 4px solid var(--secondary-color);
+        }
+        
+        .standard-card {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 15px 0;
+            border-left: 4px solid var(--accent-color);
+        }
+        
+        .standard-card h5 {
+            color: var(--accent-color);
+            margin-top: 0;
+        }
+        
+        /* Lesson Plan Styles */
+        .lesson-plan {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-left: 4px solid var(--secondary-color);
+            margin-bottom: 30px;
+            border-radius: 5px;
+        }
+        
+        .lesson-plan h3 {
+            color: var(--secondary-color);
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+        }
+        
+        .objectives {
+            background-color: #f5eef8;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        
+        .resources {
+            background-color: #f0e6f5;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        
+        .accommodation {
+            background-color: #f9f0ff;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        
+        .strategies {
+            background-color: #f3e5f5;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        
+        .lesson-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        
+        .lesson-table th {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 12px 15px;
+            text-align: left;
+        }
+        
+        .lesson-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .lesson-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        
+        .lesson-table tr:hover {
+            background-color: #f1f1f1;
+        }
+        
+        /* Assessment Styles */
+        .assessment {
+            background-color: #f0e6f5;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        
+        .rubric {
+            overflow-x: auto;
+            margin: 20px 0;
+        }
+        
+        .rubric table {
+            min-width: 800px;
+            border-collapse: collapse;
+        }
+        
+        .rubric th, .rubric td {
+            padding: 12px 15px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+        
+        .rubric th {
+            background-color: var(--light-color);
+            font-weight: 600;
+        }
+        
+        /* Who I Am Section */
+        .who-i-am {
+            background: linear-gradient(135deg, #f5eef8 0%, #d7bde2 100%);
+            padding: 40px;
+            border-radius: 10px;
+            margin-bottom: 40px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .identity-container {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        
+        .profile-image {
+            flex: 0 0 200px;
+            text-align: center;
+            background-color: #e8daef;
+            border-radius: 50%;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            border: 5px solid white;
+        }
+        
+        .profile-image i {
+            font-size: 5rem;
+            color: var(--primary-color);
+        }
+        
+        .identity-content {
+            flex: 1;
+        }
+        
+        .name-highlight {
+            color: var(--secondary-color);
+            font-weight: 700;
+        }
+        
+        .education-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .education-card {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            border-left: 4px solid var(--secondary-color);
+        }
+        
+        .education-card h3 {
+            color: var(--secondary-color);
+            margin-top: 0;
+        }
+        
+        .education-card i {
+            font-size: 1.5rem;
+            color: var(--secondary-color);
+            margin-right: 10px;
+        }
+        
+        .commitment-statement {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 25px;
+            border-radius: 8px;
+            margin-top: 30px;
+            text-align: center;
+            font-style: italic;
+            font-size: 1.1rem;
+        }
+        
+        /* About Me Section */
+        .about-container {
+            display: flex;
+            gap: 30px;
+            align-items: flex-start;
+            margin-bottom: 30px;
+        }
+        
+        .about-highlights {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .highlight-card {
+            background-color: var(--light-color);
+            padding: 20px;
+            border-radius: 5px;
+            text-align: center;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        
+        .highlight-card i {
+            font-size: 2rem;
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+        }
+        
+        /* Section Styles */
+        section {
+            background-color: white;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            scroll-margin-top: 20px;
+        }
+        
+        /* Image Styles */
+        .section-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        
+        .image-left {
+            float: left;
+            width: 40%;
+            margin-right: 20px;
+            margin-bottom: 10px;
+        }
+        
+        .image-right {
+            float: right;
+            width: 40%;
+            margin-left: 20px;
+            margin-bottom: 10px;
+        }
+        
+        .image-caption {
+            font-size: 0.9rem;
+            color: #666;
+            text-align: center;
+            margin-top: 5px;
+        }
+        
+        .image-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .image-container img {
+            flex: 1 1 300px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+        
+        /* Table Styles */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        th {
+            background-color: var(--light-color);
+            font-weight: 600;
+        }
+        
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark-color);
+            color: var(--light-text);
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 50px;
+            border-radius: 5px;
+        }
+
+        /* New Styles for Enhanced Navigation and Digital Resources */
+        
+        /* Enhanced Navigation */
+        .nav-container {
+            position: sticky;
+            top: 0;
+            background-color: var(--primary-color);
+            padding: 10px 0;
+            z-index: 99;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            display: none;
+        }
+        
+        .nav-container .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .mobile-menu-btn {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        .mobile-nav {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.9);
+            z-index: 1000;
+            overflow-y: auto;
+            padding: 20px;
+        }
+        
+        .mobile-nav.active {
+            display: block;
+        }
+        
+        .mobile-nav-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            color: white;
+        }
+        
+        .mobile-nav-close {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        .mobile-nav-links {
+            list-style: none;
+        }
+        
+        .mobile-nav-links li {
+            margin-bottom: 15px;
+        }
+        
+        .mobile-nav-links a {
+            color: white;
+            font-size: 1.2rem;
+            display: block;
+            padding: 10px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        /* Digital Resources */
+        .resource-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .resource-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .resource-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .resource-image {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+        
+        .resource-content {
+            padding: 15px;
+        }
+        
+        .resource-title {
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+        
+        .resource-description {
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+        
+        .resource-link {
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            transition: background-color 0.3s;
+        }
+        
+        .resource-link:hover {
+            background-color: #7d3c98;
+            text-decoration: none;
+        }
+        
+        /* Multimedia Elements */
+        .video-container {
+            position: relative;
+            width: 100%;
+            height: 0;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            margin: 20px 0;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        .interactive-element {
+            background-color: var(--light-color);
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        
+        .interactive-btn {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .interactive-btn:hover {
+            background-color: #c0392b;
+        }
+        
+        /* Digital Competence Showcase */
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .tech-item {
+            background-color: var(--light-color);
+            padding: 10px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .tech-item i {
+            color: var(--secondary-color);
+        }
+        
+        /* Progress bars for skills */
+        .skill-container {
+            margin: 20px 0;
+        }
+        
+        .skill {
+            margin-bottom: 15px;
+        }
+        
+        .skill-name {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
+        }
+        
+        .skill-bar {
+            height: 10px;
+            background-color: #e0e0e0;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        
+        .skill-level {
+            height: 100%;
+            background-color: var(--secondary-color);
+            border-radius: 5px;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            body {
+                flex-direction: column;
+            }
+            
+            .sidebar {
+                position: relative;
+                width: 100%;
+                height: auto;
+            }
+            
+            .main-content {
+                margin-left: 0;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.7rem;
+            }
+            
+            .hero {
+                padding: 60px 0;
+            }
+            
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .identity-container {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .profile-image {
+                flex: 0 0 auto;
+                margin: 0 auto 20px;
+                max-width: 200px;
+            }
+            
+            .about-container {
+                flex-direction: column;
+            }
+            
+            .image-left, .image-right {
+                float: none;
+                width: 100%;
+                margin: 0 0 15px 0;
+            }
+            
+            .lesson-table {
+                display: block;
+                overflow-x: auto;
+            }
+            
+            .nav-container {
+                display: block;
+            }
+            
+            .sidebar {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Mobile Navigation -->
+    <div class="nav-container">
+        <div class="container">
+            <div class="logo">Teaching Portfolio</div>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </div>
+    
+    <div class="mobile-nav" id="mobileNav">
+        <div class="mobile-nav-header">
+            <div class="logo">Teaching Portfolio</div>
+            <button class="mobile-nav-close" id="mobileNavClose">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <ul class="mobile-nav-links">
+            <li><a href="#who-i-am">WHO I AM</a></li>
+            <li><a href="#about">ABOUT ME</a></li>
+            <li><a href="#philosophy">1. MY TEACHING PHILOSOPHY</a></li>
+            <li><a href="#responsibility">2. DOCUMENTATION OF TEACHING RESPONSIBILITY</a></li>
+            <li><a href="#other">3. OTHER TEACHING-RELATED RESPONSIBILITIES</a></li>
+            <li><a href="#lesson-planning">4. LESSON PLANNING</a></li>
+            <li><a href="#assessment">5. ASSESSMENT COMPETENCE</a></li>
+            <li><a href="#feedback">6. TEACHING FEEDBACK</a></li>
+            <li><a href="#development">7. PROFESSIONAL DEVELOPMENT GOALS</a></li>
+        </ul>
+    </div>
+
+    <!-- Sidebar Navigation -->
+    <div class="sidebar">
+        <div class="logo">Teaching Portfolio</div>
+        <nav class="sidebar-nav">
+            <ul>
+                <li><a href="#who-i-am">WHO I AM</a></li>
+                <li><a href="#about">ABOUT ME</a></li>
+                <li><a href="#philosophy">1. MY TEACHING PHILOSOPHY</a></li>
+                <li><a href="#responsibility">2. DOCUMENTATION OF TEACHING RESPONSIBILITY</a>
+                    <ul>
+                        <li><a href="#school-info">School Information</a></li>
+                        <li><a href="#class-sizes">Class Sizes</a></li>
+                        <li><a href="#schedule">Weekly Teaching Schedule</a></li>
+                    </ul>
+                </li>
+                <li><a href="#other">3. OTHER TEACHING-RELATED RESPONSIBILITIES</a></li>
+                <li><a href="#lesson-planning">4. LESSON PLANNING</a>
+                    <ul>
+                        <li><a href="#lesson1">Lesson Plan 1: Digitally Rich Environment</a></li>
+                        <li><a href="#lesson2">Lesson Plan 2: Under-Resourced Environment</a></li>
+                    </ul>
+                </li>
+                <li><a href="#assessment">5. ASSESSMENT COMPETENCE</a>
+                    <ul>
+                        <li><a href="#assessment1">Assessment Tasks - Digitally Rich Classroom</a></li>
+                        <li><a href="#assessment2">Assessment Tasks - Under-Resourced Classroom</a></li>
+                    </ul>
+                </li>
+                <li><a href="#feedback">6. TEACHING FEEDBACK</a></li>
+                <li class="active"><a href="#development">7. PROFESSIONAL DEVELOPMENT GOALS</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="container">
+            <section class="hero">
+                <h1>Teaching Portfolio</h1>
+                <p>MTHEMBI MHLAVASI PERTUNIA MPINKELE</p>
+                <p>PGCE Student, University of the Witwatersrand</p>
+                <a href="#who-i-am" class="btn">Learn More About Me</a>
+            </section>
+
+            <!-- WHO I AM SECTION -->
+            <section id="who-i-am" class="who-i-am">
+                <h1>WHO I AM</h1>
+                <div class="identity-container">
+                    <div class="profile-image">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <div class="identity-content">
+                        <h2>Hello, I'm <span class="name-highlight">MTHEMBI MHLAVASI PERTUNIA MPINKELE</span></h2>
+                        <p>I am a passionate and dedicated PGCE student at the University of the Witwatersrand, specializing in Natural Sciences and Life Sciences education. My journey in education began with a deep curiosity about how students learn and a desire to make a positive impact in their lives.</p>
+                        <p>I believe that every learner has unique strengths and potential, and my role as an educator is to help them discover and develop these qualities. My teaching practice is informed by constructivist approaches, where students build knowledge through hands-on experiences and inquiry-based learning.</p>
+                    </div>
+                </div>
+                
+                <div class="education-details">
+                    <div class="education-card">
+                        <h3><i class="fas fa-graduation-cap"></i> Education</h3>
+                        <p><strong>Postgraduate Certificate in Education (PGCE)</strong><br>
+                        University of the Witwatersrand, 2025<br>
+                        Specialization: Natural Sciences & Life Sciences</p>
+                        
+                        <p><strong>Bachelor of Science (B.Sc.)</strong><br>
+                        University of Limpopo, 2021<br>
+                        Majors: Microbiology, Biochemistry, and Physiology</p>
+                    </div>
+                    
+                    <div class="education-card">
+                        <h3><i class="fas fa-award"></i> Professional Registration</h3>
+                        <p><strong>Teaching License (Pending)</strong><br>
+                        South African Council for Educators (SACE)</p>
+                    </div>
+                    
+                    <div class="education-card">
+                        <h3><i class="fas fa-language"></i> Languages</h3>
+                        <p><strong>English:</strong> Professional proficiency</p>
+                        <p><strong>isiZulu:</strong> Native proficiency</p>
+                        <p><strong>Sepedi:</strong> Conversational proficiency</p>
+                    </div>
+                </div>
+                
+                <div class="commitment-statement">
+                    "I am committed to creating learning environments where every student feels valued, challenged, and supported in their educational journey. My teaching philosophy centers on building relationships, fostering curiosity, and developing critical thinking skills that extend beyond the classroom."
+                </div>
+                
+                <!-- Digital Competence Showcase -->
+                <h3>Digital Competence & Innovation</h3>
+                <div class="tech-stack">
+                    <div class="tech-item"><i class="fas fa-laptop-code"></i> Learning Management Systems</div>
+                    <div class="tech-item"><i class="fas fa-video"></i> Video Creation & Editing</div>
+                    <div class="tech-item"><i class="fas fa-chart-bar"></i> Data Analysis Tools</div>
+                    <div class="tech-item"><i class="fas fa-gamepad"></i> Gamification Platforms</div>
+                    <div class="tech-item"><i class="fas fa-mobile-alt"></i> Mobile Learning Apps</div>
+                    <div class="tech-item"><i class="fas fa-cloud"></i> Cloud-Based Collaboration</div>
+                    <div class="tech-item"><i class="fas fa-brain"></i> AI Educational Tools</div>
+                    <div class="tech-item"><i class="fas fa-vr-cardboard"></i> Virtual & Augmented Reality</div>
+                </div>
+            </section>
+
+            <!-- ABOUT ME SECTION -->
+            <section id="about">
+                <h1>ABOUT ME</h1>
+                <div class="about-container">
+                    <div style="flex: 2;">
+                        <h2>My Educational Journey</h2>
+                        <p>My passion for teaching began during my undergraduate studies in Science at the University of Limpopo, where I volunteered as a tutor for high school students struggling with Biology and Chemistry. Witnessing the transformative power of patient, personalized instruction ignited my desire to pursue education as a career.</p>
+                        
+                        <p>During my PGCE studies at the University of the Witwatersrand, I developed a particular interest in science education and how to make complex scientific concepts accessible and engaging for diverse learners. My background in microbiology, biochemistry, and physiology provides me with a strong foundation to teach Natural Sciences and Life Sciences with depth and authenticity.</p>
+                        
+                        <h3>Teaching Approach</h3>
+                        <p>I believe in creating student-centered learning environments where curiosity is nurtured and critical thinking is developed. My approach combines:</p>
+                        <ul>
+                            <li><strong>Inquiry-based learning:</strong> Encouraging students to ask questions and explore concepts</li>
+                            <li><strong>Differentiated instruction:</strong> Adapting teaching methods to meet diverse learning needs</li>
+                            <li><strong>Real-world connections:</strong> Linking classroom learning to students' lives and experiences</li>
+                            <li><strong>Collaborative learning:</strong> Fostering peer-to-peer knowledge construction</li>
+                        </ul>
+                    </div>
+                    <div style="flex: 1;">
+                        <img src="https://images.pexels.com/photos/5212703/pexels-photo-5212703.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Teacher in classroom" class="image-right">
+                    </div>
+                </div>
+                
+                <div class="about-highlights">
+                    <div class="highlight-card">
+                        <i class="fas fa-seedling"></i>
+                        <h3>Science Education</h3>
+                        <p>Specializing in making complex scientific concepts accessible and engaging for all learners</p>
+                    </div>
+                    
+                    <div class="highlight-card">
+                        <i class="fas fa-users"></i>
+                        <h3>Inclusive Education</h3>
+                        <p>Committed to creating learning environments that welcome and support all students</p>
+                    </div>
+                    
+                    <div class="highlight-card">
+                        <i class="fas fa-laptop-code"></i>
+                        <h3>Technology Integration</h3>
+                        <p>Skilled at incorporating digital tools to enhance learning experiences</p>
+                    </div>
+                    
+                    <div class="highlight-card">
+                        <i class="fas fa-hand-holding-heart"></i>
+                        <h3>Student Wellbeing</h3>
+                        <p>Focus on holistic development and social-emotional learning</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TEACHING PHILOSOPHY SECTION -->
+            <div class="collapsible-section">
+                <div class="section-header" id="philosophy-header">
+                    <h2>1. MY TEACHING PHILOSOPHY</h2>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="section-content" id="philosophy-content">
+                    <h3>AS A SCIENCE TEACHER</h3>
+                    <p>I see teaching as more than just a job, but as my responsibility to make a real difference in learners' lives. I believe that teaching is not just transferring knowledge but about helping learners make sense of the world around them. I believe that education opens minds and helps learners to become more thoughtful and responsible citizens.</p>
+                    
+                    <div class="goal-highlight">
+                        <p><strong>Core Principles of My Teaching Philosophy:</strong></p>
+                        <ul>
+                            <li><strong>Student-Centered Learning:</strong> Education should be tailored to students' needs, interests, and learning styles</li>
+                            <li><strong>Growth Mindset:</strong> All students can learn and grow with appropriate support and challenge</li>
+                            <li><strong>Authentic Assessment:</strong> Evaluation should measure meaningful learning and application of knowledge</li>
+                            <li><strong>Culturally Responsive Teaching:</strong> Education should honor and incorporate students' diverse backgrounds and experiences</li>
+                            <li><strong>Lifelong Learning:</strong> Education should instill curiosity and skills for continuous learning beyond the classroom</li>
+                        </ul>
+                    </div>
+                    
+                    <h3>Theoretical Foundations</h3>
+                    <p>My teaching practice is informed by several educational theorists and approaches:</p>
+                    
+                    <div class="image-container">
+                        <img src="https://images.pexels.com/photos/7103/writing-notes-idea-conference.jpg?auto=compress&cs=tinysrgb&w=400" alt="Educational theory">
+                        <img src="https://images.pexels.com/photos/1370296/pexels-photo-1370296.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Classroom discussion">
+                    </div>
+                    
+                    <div class="standard-card">
+                        <h5>PEDAGOGICAL CONTENT KNOWLEDGE (SHULMAN, 1987)</h5>
+                        <p>I base my teaching on Shulman's idea of Pedagogical Content Knowledge (PCK), which means understanding the science content deeply and knowing the best ways to teach it so that learners can understand and grasp even difficult concepts. For example, when teaching forces, I connected the lesson to learners' everyday experiences such as pulling and pushing doors, brushing teeth, and other examples of forces.</p>
+                    </div>
+                    
+                    <div class="standard-card">
+                        <h5>CONSTRUCTIVISM (VYGOTSKY, 1982)</h5>
+                        <p>I believe that learners build their own understanding by connecting new knowledge to what they already know. Learning happens through experience, reflection, and social interaction, so as a teacher I guide learners to explore, question, and reason together. During my teaching experience, before explaining electricity, I asked learners what they think happens when a bulb lights up, helping them confront misconceptions.</p>
+                    </div>
+                    
+                    <div class="standard-card">
+                        <h5>CONCEPTUAL CHANGE</h5>
+                        <p>I believe in changing learners' misconceptions about scientific ideas because real learning occurs when learners' old beliefs are replaced with new ones that are scientifically accurate. For example, when teaching electricity, learners thought that electricity gets used up in the circuit, but through experiments they saw that current is the same throughout.</p>
+                    </div>
+                    
+                    <h3>Digital Innovation in Teaching</h3>
+                    <p>I integrate technology purposefully to enhance learning experiences:</p>
+                    
+                    <div class="resource-grid">
+                        <div class="resource-card">
+                            <img src="https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Virtual Lab" class="resource-image">
+                            <div class="resource-content">
+                                <div class="resource-title">Virtual Science Labs</div>
+                                <div class="resource-description">Interactive simulations for experiments that are difficult to conduct in traditional classrooms</div>
+                                <a href="#" class="resource-link">Explore Resources</a>
+                            </div>
+                        </div>
+                        
+                        <div class="resource-card">
+                            <img src="https://images.pexels.com/photos/4145354/pexels-photo-4145354.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Collaborative Platform" class="resource-image">
+                            <div class="resource-content">
+                                <div class="resource-title">Collaborative Learning Platforms</div>
+                                <div class="resource-description">Digital tools for group projects, peer feedback, and knowledge sharing</div>
+                                <a href="#" class="resource-link">Explore Resources</a>
+                            </div>
+                        </div>
+                        
+                        <div class="resource-card">
+                            <img src="https://images.pexels.com/photos/3861964/pexels-photo-3861964.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Multimedia Resources" class="resource-image">
+                            <div class="resource-content">
+                                <div class="resource-title">Multimedia Resources</div>
+                                <div class="resource-description">Videos, animations, and interactive diagrams to explain complex concepts</div>
+                                <a href="#" class="resource-link">Explore Resources</a>
+                            </div>
+                        </div>
+                        
+                        <div class="resource-card">
+                            <img src="https://images.pexels.com/photos/5900418/pexels-photo-5900418.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Assessment Tools" class="resource-image">
+                            <div class="resource-content">
+                                <div class="resource-title">Digital Assessment Tools</div>
+                                <div class="resource-description">Formative assessment platforms for immediate feedback and progress tracking</div>
+                                <a href="#" class="resource-link">Explore Resources</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TEACHING RESPONSIBILITY SECTION -->
+            <div class="collapsible-section">
+                <div class="section-header" id="responsibility-header">
+                    <h2>2. DOCUMENTATION OF TEACHING RESPONSIBILITY</h2>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="section-content" id="responsibility-content">
+                    <h3 id="school-info">School Information</h3>
+                    <p>During the third term (Term 3), I completed my Teaching Experience (TE) at Gauteng City College High School, a private high school offering Grades 8-12, located in a suburban area of Johannesburg, South Africa. The school is registered with the Gauteng Department of Education, is learner-centered, and serves a diverse student population from a range of socio-economic backgrounds.</p>
+                    
+                    <div class="goal-highlight">
+                        <p><strong>School Profile:</strong></p>
+                        <ul>
+                            <li><strong>School Name:</strong> Gauteng City College High School</li>
+                            <li><strong>School Type:</strong> Private Secondary School</li>
+                            <li><strong>School Location:</strong> Suburban area, Johannesburg, South Africa</li>
+                            <li><strong>Governing Body:</strong> Gauteng Department of Education</li>
+                            <li><strong>Student Demographics:</strong> Diverse student body, mixed socio-economic status</li>
+                        </ul>
+                    </div>
+                    
+                    <h3>Classes Taught and Subjects</h3>
+                    <p>I taught the following subjects under the guidance of my mentor teachers. I had two mentor teachers: one for FET (Life Sciences): Mr. Peter, and the other for Senior Phase (Natural Sciences): Mr. Chikomo.</p>
+                    
+                    <img src="https://images.pexels.com/photos/6646918/pexels-photo-6646918.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Classroom teaching" class="section-image">
+                    
+                    <p>All my lessons from the very first day followed the CAPS (Curriculum and Assessment Policy Statement) curriculum requirements. I was always responsible for lesson planning, classroom delivery, acknowledging learner diversity, learner engagement, and formative assessment under supervision, as my mentor teachers were consistent and enjoyed giving feedback regularly.</p>
+                    
+                    <p>I only taught one class per grade, with small class sizes that allowed for focused interaction and more manageable teaching.</p>
+                    
+                    <h3 id="class-sizes">Class Sizes</h3>
+                    <p>In Grade 10 I had only 9 learners, in Grade 9 I had 18 learners, and in Grade 8 I had 13 learners.</p>
+                    
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Grade</th>
+                                <th>Subject</th>
+                                <th>Class Size</th>
+                                <th>Notable Characteristics</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>8</td>
+                                <td>Natural Sciences</td>
+                                <td>13 students</td>
+                                <td>Mixed abilities, diverse learning styles</td>
+                            </tr>
+                            <tr>
+                                <td>9</td>
+                                <td>Natural Sciences</td>
+                                <td>18 students</td>
+                                <td>Mixed abilities, some English language learners</td>
+                            </tr>
+                            <tr>
+                                <td>10</td>
+                                <td>Life Sciences</td>
+                                <td>9 students</td>
+                                <td>Small group, allowed for individualized attention</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <h3 id="schedule">Weekly Teaching Schedule</h3>
+                    <p>My teaching schedule included both classroom instruction and additional responsibilities:</p>
+                    
+                    <table class="lesson-table">
+                        <thead>
+                            <tr>
+                                <th>Activity</th>
+                                <th>Estimated Hours per Week</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Classroom Teaching</td>
+                                <td>26 hours</td>
+                            </tr>
+                            <tr>
+                                <td>Lesson Preparation & Marking</td>
+                                <td>8 hours</td>
+                            </tr>
+                            <tr>
+                                <td>Extracurricular Involvement</td>
+                                <td>2 hours</td>
+                            </tr>
+                            <tr>
+                                <td>Meetings & Administrative Duties</td>
+                                <td>4 hours</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Total</strong></td>
+                                <td><strong>40 hours</strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <p>This summary reflects my practical teaching experience, professional responsibilities, and engagement with learners and staff during my teaching practicum. It also highlights my ability to apply pedagogical theory in a real-world classroom context.</p>
+                </div>
+            </div>
+
+            <!-- OTHER TEACHING-RELATED RESPONSIBILITIES SECTION -->
+            <div class="collapsible-section">
+                <div class="section-header" id="other-header">
+                    <h2>3. OTHER TEACHING-RELATED RESPONSIBILITIES</h2>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="section-content" id="other-content">
+                    <h3>Extracurricular Involvement</h3>
+                    <p>Beyond classroom teaching, I actively participated in various school activities and programs that contributed to the holistic development of students and the school community.</p>
+                    
+                    <img src="https://images.pexels.com/photos/7579460/pexels-photo-7579460.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Extracurricular activities" class="section-image">
+                    
+                    <div class="goal-highlight">
+                        <p><strong>Extracurricular Activities</strong></p>
+                        <ul>
+                            <li>Assisted with cultural events (awards for learners)</li>
+                            <li>Promoted teamwork & discipline</li>
+                            <li>Encouraged participation</li>
+                            <li>Helped learners develop social & leadership skills</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="goal-highlight">
+                        <p><strong>Administrative Duties</strong></p>
+                        <ul>
+                            <li>Helped in lesson planning, preparing lesson materials</li>
+                            <li>Classroom management and updating displays</li>
+                            <li>Helped in managing class attendance registers</li>
+                            <li>Supported teachers in ensuring classroom organization & daily operations</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="goal-highlight">
+                        <p><strong>Mentoring</strong></p>
+                        <ul>
+                            <li>Provided NS mentoring & counseling to guide learners</li>
+                            <li>Taught them best study techniques & motivation strategies</li>
+                            <li>Allowed supportive & inclusive learning</li>
+                            <li>Helped learners in building independent learning habits</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="goal-highlight">
+                        <p><strong>Professional Collaboration</strong></p>
+                        <ul>
+                            <li>Worked with mentor teachers & colleagues in lesson planning and moderations</li>
+                            <li>Participated in staff meetings, engaged in feedback and reflections</li>
+                            <li>Professional discussions</li>
+                            <li>Contributed to positive growth-oriented school culture</li>
+                            <li>Demonstrated continuous learning</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- LESSON PLANNING SECTION -->
+            <div class="collapsible-section">
+                <div class="section-header" id="lesson-planning-header">
+                    <h2>4. LESSON PLANNING</h2>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="section-content" id="lesson-planning-content">
+                    <h3>Approach to Lesson Planning</h3>
+                    <p>My lesson planning process is systematic, student-centered, and aligned with curriculum standards. I employ backward design principles, starting with clear learning objectives and designing assessments and activities that enable students to demonstrate their understanding.</p>
+                    
+                    <div class="goal-highlight">
+                        <p><strong>Key Elements of My Lesson Planning Approach:</strong></p>
+                        <ul>
+                            <li><strong>Clear Learning Objectives:</strong> Specific, measurable goals aligned with curriculum standards</li>
+                            <li><strong>Engaging Hook:</strong> Activities that capture student interest and connect to prior knowledge</li>
+                            <li><strong>Scaffolded Instruction:</strong> Progressive complexity with appropriate support structures</li>
+                            <li><strong>Differentiated Activities:</strong> Multiple pathways to achieve learning objectives</li>
+                            <li><strong>Formative Assessment:</strong> Ongoing checks for understanding throughout the lesson</li>
+                            <li><strong>Reflection:</strong> Opportunities for students to consolidate and reflect on their learning</li>
+                        </ul>
+                    </div>
+                    
+                    <h3 id="lesson1">Lesson Plan 1: Digitally Rich Environment</h3>
+                    <div class="lesson-plan">
+                        <h3>Introduction to Simple Circuits and Their Components</h3>
+                        <p><strong>Knowledge Strand:</strong> Energy and Change<br>
+                        <strong>Subject:</strong> Natural Sciences<br>
+                        <strong>Grade:</strong> 8<br>
+                        <strong>Duration:</strong> 60 minutes</p>
+                        
+                        <div class="objectives">
+                            <h4>Lesson Objectives</h4>
+                            <p>At the end of the lesson, learners should be able to:</p>
+                            <ul>
+                                <li>Define what a simple circuit is</li>
+                                <li>Identify the components of a simple circuit (battery, bulb, wire, and switch)</li>
+                                <li>Describe each component's function</li>
+                                <li>Differentiate between a complete (closed) and incomplete (open) circuit</li>
+                                <li>Build circuits using PhET simulations</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="resources">
+                            <h4>Resources Required</h4>
+                            <ul>
+                                <li>Smartboard</li>
+                                <li>Slides</li>
+                                <li>Internet connection</li>
+                                <li>Simulation: PhET "Circuit Construction Kit -- DC"</li>
+                                <li>Video clip: from YouTube</li>
+                                <li>Digital quiz (Kahoot)</li>
+                                <li>Google Form</li>
+                                <li>Tablets</li>
+                                <li>Digital worksheet</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="accommodation">
+                            <h4>Accommodation for Diverse Learners</h4>
+                            <ul>
+                                <li>Provide slides (images), videos and discussions</li>
+                                <li>Allow learners to manipulate simulations</li>
+                                <li>Use gamification</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="strategies">
+                            <h4>Teaching Strategies</h4>
+                            <ul>
+                                <li>Inquiry-based learning</li>
+                                <li>Demonstration and discussion</li>
+                                <li>Simulation-based exploration</li>
+                                <li>Digital formative assessment</li>
+                            </ul>
+                        </div>
+                        
+                        <h4>Lesson Sequence</h4>
+                        <table class="lesson-table">
+                            <thead>
+                                <tr>
+                                    <th>Lesson Step</th>
+                                    <th>Planned Activity</th>
+                                    <th>Teacher Actions</th>
+                                    <th>Expected Learner Participation</th>
+                                    <th>Resources / Materials Needed</th>
+                                    <th>Duration</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Engage (Connect to prior knowledge)</td>
+                                    <td>Display images of torch, lamp and charger from the internet on smart board. Ask: 'what happens when I switch this on?'</td>
+                                    <td>Guide learners in answering questions on Google Form, discussing prior knowledge, and posing questions instantly</td>
+                                    <td>Learners access Google Classroom link and answer questions, respond with previous experiences and ask questions they have</td>
+                                    <td>Google Classroom, smartboard, tablets</td>
+                                    <td>10 min</td>
+                                </tr>
+                                <tr>
+                                    <td>Explore (Hands-on discovery)</td>
+                                    <td>Learners interact with PhET simulation to connect a battery, bulb, and wires to make a bulb light. And demonstrate open and closed switch</td>
+                                    <td>Demonstrate the simulation and assist learners in building a complete and incomplete guide on how to access the link in their tablets</td>
+                                    <td>Learners login PhET using tablets and work individually, connecting the simple circuit, observing what happens and then recording results digitally in their notes</td>
+                                    <td>PhET simulation; Circuit Construction Kit, tablets</td>
+                                    <td>15 min</td>
+                                </tr>
+                                <tr>
+                                    <td>Explain</td>
+                                    <td>Fully explain what a circuit is and identify each component's function, Using PowerPoint slides and YouTube video accessed on the smartboard</td>
+                                    <td>Define "simple circuit"; explain functions of battery, bulb, wire, and switch; show labeled diagram. Explain key points on video writing on smartboard</td>
+                                    <td>Learners take notes on their tablets, ask questions and complete function descriptions, label circuit diagram digitally</td>
+                                    <td>YouTube video, PowerPoint slides, smartboard</td>
+                                    <td>20 min</td>
+                                </tr>
+                                <tr>
+                                    <td>Elaborate (Extend understanding)</td>
+                                    <td>Conduct Kahoot quiz</td>
+                                    <td>Guide learners on how to log in the Kahoot and facilitate them all, while explaining each answer and writing notes on the smartboard</td>
+                                    <td>Learners log in using their tablets and play the Kahoot quiz game and write notes on their notes in their tablets</td>
+                                    <td>Kahoot quiz, tablets</td>
+                                    <td>10 min</td>
+                                </tr>
+                                <tr>
+                                    <td>Evaluate (Check understanding)</td>
+                                    <td>Reflection questions were posted and answered on Google Classroom and homework link on Google Form on circuit components and functions</td>
+                                    <td>Guide on how to access the question and facilitate those who are struggling to help them answer reflection questions digitally</td>
+                                    <td>Learners access the reflection question and answer it, access the homework and fill it out</td>
+                                    <td>Google Form, laptops</td>
+                                    <td>5 min</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <h3 id="lesson2">Lesson Plan 2: Under-Resourced Environment</h3>
+                    <div class="lesson-plan">
+                        <h3>Introduction to Simple Circuits and Their Components</h3>
+                        <p><strong>Knowledge Strand:</strong> Energy and Change<br>
+                        <strong>Subject:</strong> Natural Sciences<br>
+                        <strong>Grade:</strong> 8<br>
+                        <strong>Duration:</strong> 60 minutes</p>
+                        
+                        <div class="objectives">
+                            <h4>Lesson Objectives</h4>
+                            <p>At the end of the lesson, learners should be able to:</p>
+                            <ul>
+                                <li>Define a simple circuit</li>
+                                <li>Identify and describe the main components: battery, bulb, wire, and switch</li>
+                                <li>Explain the function of each component</li>
+                                <li>Differentiate between closed and open circuit</li>
+                                <li>Draw a simple circuit</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="resources">
+                            <h4>Resources Required</h4>
+                            <ul>
+                                <li>Real batteries, bulbs, wires, switches</li>
+                                <li>Whiteboard</li>
+                                <li>Charts</li>
+                                <li>Circuit kits</li>
+                                <li>Worksheets and handouts</li>
+                                <li>Pencils/pens and notebooks</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="accommodation">
+                            <h4>Accommodation for Diverse Learners</h4>
+                            <ul>
+                                <li>Pair struggling learners with stronger ones to help each other more, especially when playing the game</li>
+                                <li>Use oral explanations and physical demonstration to accommodate all of them (using diagrams)</li>
+                                <li>Allow learners to draw, write, perform and speak orally to accommodate everyone</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="strategies">
+                            <h4>Teaching Strategies</h4>
+                            <ul>
+                                <li>Using demonstration and guided discussion</li>
+                                <li>Gamification</li>
+                                <li>Group work between learners as I facilitate</li>
+                                <li>Hands-on exploration</li>
+                                <li>Observation and reflection</li>
+                            </ul>
+                        </div>
+                        
+                        <h4>Lesson Sequence</h4>
+                        <table class="lesson-table">
+                            <thead>
+                                <tr>
+                                    <th>Lesson Step</th>
+                                    <th>Planned Activity</th>
+                                    <th>Teacher Actions</th>
+                                    <th>Expected Learner Participation</th>
+                                    <th>Resources / Materials Needed</th>
+                                    <th>Duration</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Engage (Connect to prior knowledge)</td>
+                                    <td>Show a real battery and bulb. Ask: "What happens when I switch this on?"</td>
+                                    <td>Teacher corrects misconceptions learners have and tries asking questions asked by learners. Write points on whiteboard</td>
+                                    <td>Learners share ideas and answer questions asked by the teacher, and copy points in their notebooks</td>
+                                    <td>Real battery, bulb, whiteboard, markers and notebooks</td>
+                                    <td>10 min</td>
+                                </tr>
+                                <tr>
+                                    <td>Explore (Hands-on discovery)</td>
+                                    <td>Teacher first demonstrates simple circuits and how close and open and closed circuit works using charts and diagrams, then learners in groups try to light a bulb using circuit kits</td>
+                                    <td>Distribute circuit kits amongst groups and observe their connections while you ask probing questions</td>
+                                    <td>Learners test different ways to connect the battery and bulb; observe outcomes and record results in their notebooks</td>
+                                    <td>Notebook, circuit kit (battery, bulbs, wires, switches)</td>
+                                    <td>15 min</td>
+                                </tr>
+                                <tr>
+                                    <td>Explain</td>
+                                    <td>Introduce the term "simple circuit" and explain each component's function and their functions</td>
+                                    <td>Draw a labeled diagram and paste a chart of a labeled diagram on the whiteboard; explain functions of battery (energy source), bulb (output), wires (path), switch (control), and their symbols as well</td>
+                                    <td>Learners copy diagrams in notebooks and listen and ask questions as they identify components on their desks with peers</td>
+                                    <td>Chart, whiteboard</td>
+                                    <td>20 min</td>
+                                </tr>
+                                <tr>
+                                    <td>Elaborate (broad explanations for understanding)</td>
+                                    <td>Gamification (role playing game)</td>
+                                    <td>Facilitate role-play gaming, assign learners as different components of circuit (bulb, switch, current, battery) and give them handout for rules/instructions</td>
+                                    <td>Learners assigned roles, and engage in the game, each with instruction/role handout</td>
+                                    <td>Handout for game instruction</td>
+                                    <td>10 min</td>
+                                </tr>
+                                <tr>
+                                    <td>Evaluate (Check understanding)</td>
+                                    <td>Reflection, exit tickets and homework (worksheet) hand-out</td>
+                                    <td>Facilitate oral reflection while correcting misconceptions by writing notes on the whiteboard, give learners exit tickets and distribute homework worksheets</td>
+                                    <td>Learners answer oral reflections, write notes and exit tickets, and paste worksheets for homework in their books and write corrections</td>
+                                    <td>Whiteboard, exit ticket worksheets, notebooks</td>
+                                    <td>5 min</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ASSESSMENT COMPETENCE SECTION -->
+            <div class="collapsible-section">
+                <div class="section-header" id="assessment-header">
+                    <h2>5. ASSESSMENT COMPETENCE</h2>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="section-content" id="assessment-content">
+                    <h3>Assessment Philosophy</h3>
+                    <p>I view assessment as an integral part of the teaching and learning process, serving multiple purposes including measuring student progress, informing instruction, and promoting student self-regulation. My assessment practices are aligned with curriculum standards and designed to provide meaningful feedback to support student growth.</p>
+                    
+                    <div class="goal-highlight">
+                        <p><strong>Principles Guiding My Assessment Approach:</strong></p>
+                        <ul>
+                            <li><strong>Assessment FOR Learning:</strong> Formative assessment to guide instruction</li>
+                            <li><strong>Assessment AS Learning:</strong> Developing students' self-assessment skills</li>
+                            <li><strong>Assessment OF Learning:</strong> Summative assessment to measure achievement</li>
+                            <li><strong>Authentic Assessment:</strong> Tasks that reflect real-world applications</li>
+                            <li><strong>Differentiated Assessment:</strong> Multiple ways for students to demonstrate understanding</li>
+                        </ul>
+                    </div>
+                    
+                    <h3 id="assessment1">Assessment Tasks - Digitally Rich Classroom</h3>
+                    <div class="assessment">
+                        <h4>Topic: Introduction to Simple Circuits and Their Components</h4>
+                        <p><strong>Grade:</strong> 8<br>
+                        <strong>Duration:</strong> Ongoing formative and summative assessment</p>
+                        
+                        <h5>Assessment Type</h5>
+                        <p><strong>Formative:</strong> Kahoot quiz and PhET simulation, Digital worksheet and labeled diagram submission</p>
+                        
+                        <h5>Assessment Task Description</h5>
+                        <ol>
+                            <li><strong>Kahoot Quiz (8 questions)</strong>
+                                <ul>
+                                    <li>Learners are to complete an interactive digital quiz testing which tests their understanding of circuit components and their functions</li>
+                                    <li>Example question: "What does a switch do in a circuit?"</li>
+                                </ul>
+                            </li>
+                            <li><strong>Digital Worksheet</strong>
+                                <ul>
+                                    <li>Learners build and label a simple circuit digitally using PhET simulation</li>
+                                    <li>Identify components (battery, bulb, wire, switch)</li>
+                                    <li>Write one sentence describing each component's function</li>
+                                    <li>Submit via Google Form</li>
+                                </ul>
+                            </li>
+                        </ol>
+                        
+                        <h5>Alignment with Lesson Objectives</h5>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Lesson Objective</th>
+                                    <th>Assessment Method</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Define a simple circuit</td>
+                                    <td>Kahoot quiz question on definition of a circuit</td>
+                                </tr>
+                                <tr>
+                                    <td>Identify and label basic components</td>
+                                    <td>Digital worksheet & labeling task</td>
+                                </tr>
+                                <tr>
+                                    <td>Able to describe the function of each component</td>
+                                    <td>Written responses in worksheet and discussion forum</td>
+                                </tr>
+                                <tr>
+                                    <td>Able to differentiate between open and closed circuits</td>
+                                    <td>Simulation observation questions & Kahoot quiz</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        
+                        <h5>Rubric for Digital Worksheet (25 marks total)</h5>
+                        <div class="rubric">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Criteria</th>
+                                        <th>Exemplary (6-7)</th>
+                                        <th>Proficient (4-5)</th>
+                                        <th>Developing (2-3)</th>
+                                        <th>Needs Improvement (0-1)</th>
+                                        <th>Marks</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>Labeling of Components Circuit Diagram Accuracy</strong></td>
+                                        <td>Ability to name and identify simple circuit components</td>
+                                        <td>Most components are labeled correctly digitally and use correct symbols. Minor errors and correct structure</td>
+                                        <td>Identifies most components but few symbol errors and naming</td>
+                                        <td>Major errors, unable to identify most components or no correct labels</td>
+                                        <td>/7</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Circuit construction and PhET simulation</strong></td>
+                                        <td>High skills in constructing a complete working circuit drawn correctly and complete, logically structured</td>
+                                        <td>Accurate, fully functioning circuit, good use of tool and explore open and closed circuits alone</td>
+                                        <td>Mostly correct with less connection errors</td>
+                                        <td>Circuit builds incomplete, faulty with limited understanding of connections</td>
+                                        <td>/6</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Explanation of Functions</strong></td>
+                                        <td>Clear, correct explanation of all components' functions using scientific language</td>
+                                        <td>Mostly correct explanations; minor language errors and minor conceptual errors</td>
+                                        <td>Partial or vague explanations, giving little details</td>
+                                        <td>Incorrect or inaccurate explanations</td>
+                                        <td>/6</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Reflection, digital participation and communication</strong></td>
+                                        <td>Involvement interactive quiz activities, discussions forums, filling out worksheets and reflection demonstrates insightfulness</td>
+                                        <td>Show general understanding, fair participation and neat with minor formatting issues</td>
+                                        <td>Limited participation and brief reflection</td>
+                                        <td>No participation and no reflection submission, or incomplete submission</td>
+                                        <td>/6</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p><strong>Total Marks: 25</strong></p>
+                        
+                        <h5>Additional Assessment Tools</h5>
+                        <ul>
+                            <li><strong>Teacher Observation Checklist:</strong>
+                                <ul>
+                                    <li>Are learners actively engaged with simulation?</li>
+                                    <li>Do they correctly connect components?</li>
+                                    <li>Collaborate effectively during discussions?</li>
+                                    <li>Do quiz activities?</li>
+                                </ul>
+                            </li>
+                            <li><strong>Self-Reflection Prompt:</strong> "Describe one thing you learned about how electricity flows in a simple circuit."</li>
+                        </ul>
+                    </div>
+                    
+                    <h3 id="assessment2">Assessment Tasks - Under-Resourced Classroom</h3>
+                    <div class="assessment">
+                        <h4>Topic: Introduction to Simple Circuits and Their Components</h4>
+                        <p><strong>Grade:</strong> 8<br>
+                        <strong>Duration:</strong> Ongoing formative and summative assessment</p>
+                        
+                        <h5>Assessment Type</h5>
+                        <p><strong>Formative:</strong> Oral questioning and group observation, worksheet and labeled diagram on paper</p>
+                        
+                        <h5>Assessment Task Description</h5>
+                        <ol>
+                            <li><strong>Oral Questions</strong>
+                                <ul>
+                                    <li>Questions the teacher asked during the lesson</li>
+                                </ul>
+                            </li>
+                            <li><strong>Worksheet Activity</strong>
+                                <ul>
+                                    <li>Learners draw and label the simple circuit in their books and plain papers</li>
+                                    <li>Describing components functions</li>
+                                </ul>
+                            </li>
+                            <li><strong>Group Demonstration (Gamified)</strong>
+                                <ul>
+                                    <li>Learners act as components; one as battery, one as wire, one as bulb, one as switch. When the "switch" opens, the "current" (learner) stops moving</li>
+                                </ul>
+                            </li>
+                        </ol>
+                        
+                        <h5>Alignment with Lesson Objectives</h5>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Lesson Objective</th>
+                                    <th>Assessment Method</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Define a simple circuit</td>
+                                    <td>Oral questioning</td>
+                                </tr>
+                                <tr>
+                                    <td>Identify and label basic components</td>
+                                    <td>Worksheet drawing</td>
+                                </tr>
+                                <tr>
+                                    <td>Describe function of each component</td>
+                                    <td>Written explanation & role-play</td>
+                                </tr>
+                                <tr>
+                                    <td>Distinguish between open and closed circuit</td>
+                                    <td>Role-play and oral questions</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        
+                        <h5>Rubric for Worksheet (25 marks total)</h5>
+                        <div class="rubric">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Criteria</th>
+                                        <th>Exemplary (4-5)</th>
+                                        <th>Proficient (3-4)</th>
+                                        <th>Developing (2-3)</th>
+                                        <th>Needs Improvement (0-1)</th>
+                                        <th>Marks</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>Labeling of Components / Circuit Diagram Accuracy</strong></td>
+                                        <td>All circuit components are accurately drawn, named, and labeled. Diagrams are neat and complete</td>
+                                        <td>Most components are correctly labeled and drawn, little errors in symbol arrangement. Shows understanding of simple circuits</td>
+                                        <td>Some components identified correctly, but several missing or incorrectly drawn. Limited accuracy in labeling or symbol use</td>
+                                        <td>Major errors or incomplete diagram. Unable to identify or label most components</td>
+                                        <td>/5</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Circuit Construction (Practical or Group Demonstration)</strong></td>
+                                        <td>Demonstrates high practical skills in building a working circuit using circuit kits. All connections are correct and circuit functions properly</td>
+                                        <td>Circuits are mostly correct and function with minor connection or material errors. Shows understanding of open/closed circuits</td>
+                                        <td>Circuits are partly correct but have functional issues or limited understanding of connections</td>
+                                        <td>Circuit incomplete, incorrect, or not functioning. Shows little understanding of construction</td>
+                                        <td>/5</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Explanation of Functions</strong></td>
+                                        <td>Provides clear, correct scientific explanations of how each component functions and how electricity flows, using scientific terms</td>
+                                        <td>Mostly correct explanations with minor language errors and general understanding</td>
+                                        <td>Gives little understanding with limited detail or some misconceptions</td>
+                                        <td>Explanations are incorrect, incomplete, or missing</td>
+                                        <td>/5</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Gamification</strong></td>
+                                        <td>Actively participates in role-play, correctly demonstrates component functions and circuit operation</td>
+                                        <td>Participates in role-play with minor errors in demonstrating functions</td>
+                                        <td>Limited participation or understanding in role-play activity</td>
+                                        <td>No participation or incorrect demonstration of concepts</td>
+                                        <td>/5</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Reflection, Collaboration, and Communication</strong></td>
+                                        <td>Shows deep reflection on what was learned through class discussion, oral feedback, or written reflection. Participate actively in group work and share ideas clearly</td>
+                                        <td>Shows understanding and participation in discussion or group tasks. Reflection is present with minor gaps</td>
+                                        <td>Little participation or reflection. Show little clarity</td>
+                                        <td>No participation, reflection missing or incomplete</td>
+                                        <td>/5</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p><strong>Total Marks: 25</strong></p>
+                        
+                        <h5>Additional Assessment Tools</h5>
+                        <ul>
+                            <li><strong>Teacher Observation Checklist:</strong>
+                                <ul>
+                                    <li>Participates in group demonstration</li>
+                                    <li>Uses correct terminology (battery, bulb, switch, wire)</li>
+                                    <li>Responds accurately to oral questions</li>
+                                </ul>
+                            </li>
+                            <li><strong>Peer Assessment:</strong> Learners mark one another's diagrams using a simplified version of the rubric</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TEACHING FEEDBACK SECTION -->
+            <div class="collapsible-section">
+                <div class="section-header" id="feedback-header">
+                    <h2>6. TEACHING FEEDBACK</h2>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="section-content" id="feedback-content">
+                    <h3>Feedback from Mentors and Supervisors</h3>
+                    <p>Throughout my teaching practice, I received valuable feedback from mentor teachers, university supervisors, and school administrators. This feedback has been instrumental in shaping my development as an educator.</p>
+                    
+                    <img src="https://images.pexels.com/photos/8865216/pexels-photo-8865216.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Teaching feedback" class="section-image">
+                    
+                    <div class="goal-highlight">
+                        <p><strong>Strengths Identified by Mentors:</strong></p>
+                        <ul>
+                            <li><strong>Classroom Management:</strong> "Establishes clear expectations and maintains a positive learning environment."</li>
+                            <li><strong>Lesson Planning:</strong> "Creates well-structured lessons with engaging activities that cater to diverse learners."</li>
+                            <li><strong>Student Engagement:</strong> "Uses varied strategies to maintain high levels of student interest and participation."</li>
+                            <li><strong>Content Knowledge:</strong> "Demonstrates strong subject matter expertise and ability to explain complex concepts clearly."</li>
+                            <li><strong>Professionalism:</strong> "Shows commitment to continuous improvement and collaborates effectively with colleagues."</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="standard-card">
+                        <h5>AREAS FOR DEVELOPMENT IDENTIFIED BY SUPERVISORS</h5>
+                        <ul>
+                            <li><strong>Pacing:</strong> "Continue to refine timing of lesson components to ensure adequate coverage of all activities."</li>
+                            <li><strong>Questioning Techniques:</strong> "Develop more strategic questioning to probe higher-order thinking skills."</li>
+                            <li><strong>Assessment Variety:</strong> "Incorporate more diverse assessment methods to capture different aspects of learning."</li>
+                            <li><strong>Parent Communication:</strong> "Strengthen communication with parents regarding student progress and classroom activities."</li>
+                        </ul>
+                    </div>
+                    
+                    <h3>Student Feedback</h3>
+                    <p>I value student perspectives on my teaching and regularly seek their feedback through anonymous surveys and informal conversations.</p>
+                    
+                    <div class="image-container">
+                        <img src="https://images.pexels.com/photos/1266028/pexels-photo-1266028.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Student feedback">
+                        <img src="https://images.pexels.com/photos/4145354/pexels-photo-4145354.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Classroom interaction">
+                    </div>
+                    
+                    <div class="goal-highlight">
+                        <p><strong>Student Feedback Highlights:</strong></p>
+                        <ul>
+                            <li>"You explain difficult concepts in ways that make sense to us."</li>
+                            <li>"I appreciate how you give us different ways to show what we've learned."</li>
+                            <li>"Your classes are interesting because we get to do hands-on activities."</li>
+                            <li>"You're patient when we don't understand something the first time."</li>
+                            <li>"You make science relevant to our lives outside of school."</li>
+                        </ul>
+                    </div>
+                    
+                    <h3>Self-Reflection and Growth</h3>
+                    <p>I maintain a reflective teaching journal where I document my observations, challenges, and successes. This practice helps me identify patterns in my teaching and plan for continuous improvement.</p>
+                    
+                    <div class="standard-card">
+                        <h5>KEY INSIGHTS FROM SELF-REFLECTION</h5>
+                        <ul>
+                            <li>I've noticed that students are most engaged when lessons connect to real-world applications</li>
+                            <li>Providing choice in learning activities increases student motivation and ownership</li>
+                            <li>Building strong relationships with students creates a foundation for effective teaching</li>
+                            <li>Explicit teaching of metacognitive strategies helps students become more independent learners</li>
+                            <li>Collaborative planning with colleagues enhances the quality of my instruction</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="goal-highlight">
+                        <p><strong>Action Plan Based on Feedback:</strong></p>
+                        <ul>
+                            <li>Implement more frequent checks for understanding during direct instruction</li>
+                            <li>Develop a system for regular communication with parents about classroom activities</li>
+                            <li>Participate in professional development on advanced questioning techniques</li>
+                            <li>Create more opportunities for student self-assessment and reflection</li>
+                            <li>Seek additional mentorship in managing challenging classroom behaviors</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PROFESSIONAL DEVELOPMENT GOALS SECTION -->
+            <div class="collapsible-section">
+                <div class="section-header" id="development-header">
+                    <h2>7. PROFESSIONAL DEVELOPMENT GOALS</h2>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="section-content active" id="development-content">
+                    <h3>FIRST YEAR OF TEACHING</h3>
+                    
+                    <img src="https://images.pexels.com/photos/8386434/pexels-photo-8386434.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Teacher planning and professional development" class="section-image">
+                    
+                    <div class="goal-section">
+                        <h4>Introduction</h4>
+                        <p>As a first-year teacher, I believe and know that growing as a teacher is a journey. So, I want to be a reflective, knowledgeable and caring teacher. I would like to improve my skills, connect with my learners and get to know each other and be more confident in the classroom. My main goal is to help my learners learn very well, engage, promote inclusion and improve teaching knowledge. My goals follow the professional teaching standards and South African education laws found in Constitution (1996) and the Schools Act (1996).</p>
+                    </div>
+                    
+                    <div class="goal-section">
+                        <h4>IMPROVE TEACHING KNOWLEDGE AND TEACHING SKILLS</h4>
+                        <p>My goal is to understand Natural Science concepts much better and be able to explain them in ways that learners will understand. I will focus more in connecting science concepts with learner's everyday experiences, for example when I'm teaching energy transfer, I will use examples they use at home. I also draw on Mavhunga's (2018) TSPCK to identify and address learner's misconceptions in topics like electricity, since learners come with different ideas and beliefs from home.</p>
+                        
+                        <div class="goal-highlight">
+                            <p><strong>How am I going to do it?</strong></p>
+                            <ul>
+                                <li>I will make sure I work with experienced teachers to observe their lessons and ask for guidance more, especially when it comes to classroom management since they know their learners than me</li>
+                                <li>I will attend workshops and enroll in online courses which teach science topics (Shulman, 1989; Mavhunga, 2018)</li>
+                                <li>I will make sure I read science education journals, resources to stay updated. And research on topics I will be teaching in class to get more information, especially on common misconceptions</li>
+                                <li>Co-plan lessons using PCK and TSPCK ideas with my colleague's supervision sometimes</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="goal-highlight">
+                            <p><strong>SUPPORT I WILL NEED</strong></p>
+                            <ul>
+                                <li>I will need to be mentored or helped by my senior teachers and on how to access professional learning resources</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="goal-section">
+                        <h4>CREATING AN INCLUSIVE AND LEARNER FRIENDLY CLASSROOM ENVIRONMENT</h4>
+                        <p>My goal is to create a classroom environment where all diverse learners feel respected, including and motivated. South African institutions and School Act remind us that learners have rights to fair, quality education.</p>
+                        
+                        <div class="goal-highlight">
+                            <p><strong>How I am going to do it</strong></p>
+                            <ul>
+                                <li>I will make sure that I use different teaching methods/strategies to suit diverse learners' needs</li>
+                                <li>I will incorporate group work, practical investigations and discussions to allow learners to learn from one another following Vygotsky (1978) Sociocultural Theory which emphasizes working together through interactions</li>
+                                <li>Use digital tools to make interactive lessons fun and gamifications</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="goal-highlight">
+                            <p><strong>Support I will need</strong></p>
+                            <ul>
+                                <li>I will need some guidance from inclusive education specialists, colleagues' feedback and access to assistive technologies</li>
+                                <li>Also collaborate with teachers who have experience with teaching learners with different abilities</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="goal-section">
+                        <h4>IMPROVE ASSESSMENTS AND FEEDBACK</h4>
+                        <p>My goal is to give my learners assessments that are fair and understandable and provide helpful feedback.</p>
+                        
+                        <div class="goal-highlight">
+                            <p><strong>How I will do it</strong></p>
+                            <ul>
+                                <li>Align my assessment with my lesson objective and CAPS document all the time</li>
+                                <li>Always give feedback that helps learners to improve and grow as well</li>
+                                <li>Always check learners' assessment results to see what works and how I can help them</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="goal-highlight">
+                            <p><strong>The support I will need</strong></p>
+                            <ul>
+                                <li>I will need mentorship on designing assessments and workshops on assessment strategies</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="goal-section">
+                        <h4>REFLECT AND GROW AS A TEACHER</h4>
+                        <p>My goal is to become a reflective teacher who learns from every lesson.</p>
+                        
+                        <div class="goal-highlight">
+                            <p><strong>How I will do it</strong></p>
+                            <ul>
+                                <li>Always keep a journal, writing down what went well and what went wrong and how I will improve (Loughran, 2002; Palmer, 1998)</li>
+                                <li>Ask for feedback from colleagues</li>
+                                <li>Make weekly progress, reflect on it and set new goals for the following week</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="goal-highlight">
+                            <p><strong>Support I will need</strong></p>
+                            <ul>
+                                <li>Schedule meetings with my colleagues for feedback</li>
+                                <li>Support from senior teachers, professional learning groups and reflection guides and from peer teachers who are new</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="goal-section">
+                        <h4>USE TECHNOLOGY EFFECTIVELY</h4>
+                        <p>My goal is to use digital tools to make learning more engaging and easier to understand, this will help me make abstract concepts concrete.</p>
+                        
+                        <div class="goal-highlight">
+                            <p><strong>How I will do it</strong></p>
+                            <ul>
+                                <li>I will use simulations, videos and interactive tools in my lessons</li>
+                                <li>Research and attend training on digital TPACK and blended learning</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="goal-highlight">
+                            <p><strong>Support I will need</strong></p>
+                            <ul>
+                                <li>I will need assistance in accessing computers, projectors and internet (technical support), training and learn to use digital tools effectively</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="goal-section">
+                        <h4>UPHOLDING PROFESSIONAL AND ETHICAL VALUES</h4>
+                        <p>My goal as a first-year teacher registered with SACE I commit myself to fairness, integrity and respect Jansen (2001) and Biesta (2013) inspires me to see teaching as moral work.</p>
+                        
+                        <div class="goal-highlight">
+                            <p><strong>How I will do it</strong></p>
+                            <ul>
+                                <li>I will help my learners not to only gain knowledge but to grow responsibly and be compassionate</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="goal-highlight">
+                            <p><strong>Support I will need</strong></p>
+                            <ul>
+                                <li>I will seek guidance from my HOD on handling ethical and disciplinary issues</li>
+                                <li>I will also seek support from the school management team in what is expected from me</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="goal-section">
+                        <h3>ALIGNMENT WITH PROFESSIONAL TEACHING STANDARDS</h3>
+                        
+                        <div class="standard-card">
+                            <h5>STANDARD 1: KNOWLEDGE OF SUBJECT MATTER AND CURRICULUM</h5>
+                            <ul>
+                                <li><strong>Content Mastery:</strong> Deepen understanding of Natural Sciences and Life Sciences concepts beyond curriculum requirements</li>
+                                <li><strong>Curriculum Integration:</strong> Seamlessly connect CAPS requirements with real-world applications and current scientific developments</li>
+                                <li><strong>Conceptual Understanding:</strong> Focus on developing students' conceptual understanding rather than rote memorization</li>
+                                <li><strong>Interdisciplinary Connections:</strong> Create meaningful connections between science and other subject areas</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="standard-card">
+                            <h5>STANDARD 2: KNOWLEDGE OF TEACHING AND LEARNING</h5>
+                            <ul>
+                                <li><strong>Evidence-Based Practice:</strong> Implement teaching strategies supported by educational research and cognitive science</li>
+                                <li><strong>Developmental Appropriateness:</strong> Align teaching methods with students' cognitive and emotional development stages</li>
+                                <li><strong>Learning Theories:</strong> Apply constructivist, sociocultural, and cognitive learning theories in practice</li>
+                                <li><strong>Metacognitive Development:</strong> Teach students how to monitor and regulate their own learning processes</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="standard-card">
+                            <h5>STANDARD 3: TEACHING AND LEARNING RELATIONSHIPS</h5>
+                            <ul>
+                                <li><strong>Positive Relationships:</strong> Build trusting, respectful relationships with all students</li>
+                                <li><strong>Cultural Competence:</strong> Develop understanding of and responsiveness to diverse cultural backgrounds</li>
+                                <li><strong>Communication Excellence:</strong> Master effective communication with students, parents, and colleagues</li>
+                                <li><strong>Collaborative Learning:</strong> Foster peer-to-peer learning and collaborative problem-solving</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="standard-card">
+                            <h5>STANDARD 4: LANGUAGE PROFICIENCY</h5>
+                            <ul>
+                                <li><strong>Academic Language:</strong> Explicitly teach scientific vocabulary and discourse patterns</li>
+                                <li><strong>Language Support:</strong> Provide scaffolding for English Language Learners in science contexts</li>
+                                <li><strong>Communication Skills:</strong> Develop students' abilities to articulate scientific thinking clearly</li>
+                                <li><strong>Multiple Representations:</strong> Use varied language modes (oral, written, visual) to explain concepts</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="standard-card">
+                            <h5>STANDARD 5: ASSESSMENT PRACTICES</h5>
+                            <ul>
+                                <li><strong>Formative Assessment:</strong> Implement ongoing assessment to guide instruction and provide timely feedback</li>
+                                <li><strong>Assessment Variety:</strong> Utilize diverse assessment methods to capture different aspects of learning</li>
+                                <li><strong>Data-Informed Instruction:</strong> Use assessment data to make informed instructional decisions</li>
+                                <li><strong>Student Self-Assessment:</strong> Develop students' abilities to evaluate their own learning progress</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="standard-card">
+                            <h5>STANDARD 6: PROFESSIONAL RESPONSIBILITIES</h5>
+                            <ul>
+                                <li><strong>Reflective Practice:</strong> Maintain regular reflection on teaching effectiveness and student learning</li>
+                                <li><strong>Professional Learning:</strong> Engage in continuous professional development and learning communities</li>
+                                <li><strong>Ethical Practice:</strong> Uphold high ethical standards and professional integrity</li>
+                                <li><strong>Collaborative Contribution:</strong> Actively contribute to school community and professional networks</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <footer>
+                <div class="container">
+                    <p>&copy; 2025 Teaching Portfolio - MTHEMBI MHLAVASI PERTUNIA MPINKELE. All rights reserved.</p>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script>
+        // Collapsible section functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const sectionHeaders = document.querySelectorAll('.section-header');
+            
+            sectionHeaders.forEach(header => {
+                header.addEventListener('click', function() {
+                    const content = this.nextElementSibling;
+                    
+                    // Toggle active class on header
+                    this.classList.toggle('active');
+                    
+                    // Toggle active class on content
+                    content.classList.toggle('active');
+                    
+                    // If the content is being closed, set max-height to 0
+                    if (!content.classList.contains('active')) {
+                        content.style.maxHeight = '0';
+                    } else {
+                        // If the content is being opened, set max-height to its scroll height
+                        content.style.maxHeight = content.scrollHeight + 'px';
+                    }
+                });
+            });
+            
+            // Mobile navigation functionality
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const mobileNav = document.getElementById('mobileNav');
+            const mobileNavClose = document.getElementById('mobileNavClose');
+            
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileNav.classList.add('active');
+            });
+            
+            mobileNavClose.addEventListener('click', () => {
+                mobileNav.classList.remove('active');
+            });
+            
+            // Close mobile nav when clicking on a link
+            document.querySelectorAll('.mobile-nav-links a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileNav.classList.remove('active');
+                });
+            });
+            
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 20,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+            
+            // Set initial active section
+            document.addEventListener('DOMContentLoaded', function() {
+                // Open the first section by default
+                const firstSectionHeader = document.querySelector('.section-header');
+                if (firstSectionHeader) {
+                    firstSectionHeader.classList.add('active');
+                    firstSectionHeader.nextElementSibling.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
